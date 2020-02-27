@@ -1,0 +1,10 @@
+head = "  o  "
+arms = " /|\\"
+legs = " / \\"
+
+def my_Hangman():
+	print(head)
+	print(arms)
+	print(legs)
+
+my_Hangman()
