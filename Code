@@ -62,5 +62,5 @@ while tries > 0:
 
 	if tries == 0:
 		print("Looks like all your tries are used up!")
-		print("(っ◔◡◔)っ GAME OVER!")
+		print("(っ◔╭╮◔)っ GAME OVER!")
 		break
