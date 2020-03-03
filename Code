@@ -35,7 +35,6 @@ def Hangman_3():
 	print("  o  ")
 	print("_____")
 
-Fails = 0
 Hangman()
 
 while tries > 0:
