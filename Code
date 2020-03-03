@@ -56,7 +56,8 @@ while tries > 0:
 		Hangman_3()
 
 	if guess == word:
-		print("You guessed the word, you win")
+		print("You guessed the word!")
+		print("(っ◔◡◔)っ You Win!")
 		break
 
 	if tries == 0:
