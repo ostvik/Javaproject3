@@ -1,10 +1,65 @@
-head = "  o  "
-arms = " /|\\"
-legs = " / \\"
+import random
+print("Welcome to Hangman!")
+print("You will have three tries to guess the word.")
+print("Do you want the word to be 4,5, or 6 letters long?")
+letters = input()
+tries = 3
 
-def my_Hangman():
-	print(head)
-	print(arms)
-	print(legs)
+if letters == "4":
+	words4 = ["baby", "dark", "jazz"]
+	word = random.choice(words4)
 
-my_Hangman()
+if letters == "5":
+	words5 = ["apple", "balls", "clock", "phone"]
+	word = random.choice(words5)
+
+if letters == "6":
+	words6 = ["tissue", "chairs" , "bottle"]
+	word = random.choice(words6)
+
+def Hangman():
+	print("_____")
+	print("  o  ")
+	print(" /|\\")
+	print(" / \\")
+	print("_____")
+
+def Hangman_2():
+	print("_____")
+	print("  o  ")
+	print(" /|\\")
+	print("_____")
+
+def Hangman_3():
+	print("_____")
+	print("  o  ")
+	print("_____")
+
+Fails = 0
+Hangman()
+
+while tries > 0:
+
+	print("guess a letter in the secret word!")
+	guess = input()
+
+	if guess in word:
+		print(guess + " is in the word")
+	else:
+		tries -= 1
+		print("you have this many tries left")
+		print(tries)
+	if tries == 2:
+		Hangman_2()
+
+	if tries == 1:
+		Hangman_3()
+
+	if guess == word:
+		print("You guessed the word, you win")
+		break
+
+	if tries == 0:
+		print("Looks like all your tries are used up!")
+		print("Game Over!")
+		break
